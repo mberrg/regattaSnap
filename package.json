@@ -1,30 +1,43 @@
 {
-  "name": "wethr",
+  "name": "regattalistner",
   "version": "1.4.0",
   "description": "Command line weather tool",
-  "main": "main.js",
+  "main": "./build/main.js",
   "scripts": {
-    "lint": "standard --fix --verbose | snazzy",
-    "test": "npm run lint && ava test/*"
+    "build": "rimraf ./build && tsc",
+    "start:dev": "nodemon",
+    "start": "npm run build && node build/main.js",
+    "lint": "eslint . --ext .ts",
+    "prettier-format": "prettier --config .prettierrc 'src/**/*.ts' --write"
   },
   "bin": {
-    "wethr": "main.js"
+    "regattalistner": "./build/main.js"
   },
   "keywords": [
     "command line",
-    "weather",
+    "regatta",
     "cli",
     "terminal"
   ],
-  "author": "Hrvoje Simic <hrvoje@twobucks.co>",
+  "author": "Morten Berg <morten.berg@nortekgroup.com>",
   "license": "MIT",
   "dependencies": {
     "i2c-bus": "^5.2.0",
     "ws": "^7.3.0"
   },
   "devDependencies": {
-    "ava": "^0.19.1",
-    "snazzy": "^7.0.0",
-    "standard": "^10.0.2"
+    "@types/i2c-bus": "^5.1.0",
+    "@types/node": "^14.0.11",
+    "@types/ws": "^7.2.5",
+    "@typescript-eslint/eslint-plugin": "^2.21.0",
+    "@typescript-eslint/parser": "^2.21.0",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "prettier": "^1.19.1",
+    "rimraf": "^3.0.2",
+    "ts-node": "^8.10.2",
+    "tslint": "^6.1.2",
+    "typescript": "^3.9.5"
   }
 }
