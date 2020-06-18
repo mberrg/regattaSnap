@@ -1,13 +1,9 @@
-name: wethr
+name: RegattaListner
 version: git
-summary: Command line weather tool.
+summary: Command line regatta horn
 description: |
-  Get current weather:-
-    $ wethr
-  Get current weather in metric units
-    $ wethr --metric
-  Get current weather in imperial units
-    $ wethr --imperial
+  Start listner:-
+    $ regattalistner
 
 confinement: devmode
 base: core18
@@ -19,4 +15,4 @@ parts:
 
 apps:
   wethr:
-    command: wethr
+    command: regattalistner
