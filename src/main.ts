@@ -205,7 +205,7 @@ class CountDownStore {
       this.regData &= ~(0xf << 0);
       this.i2cBus.writeByteSync(DEVICE_ADDRESS, DEVICE_REG_MODE1, this.regData);
     }
-    setTimeout(() => this.hornOff(), 1000);
+    setTimeout(() => this.hornOff(), 1500);
   }
 
   checkForHorn() {

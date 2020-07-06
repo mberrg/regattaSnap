@@ -1,7 +1,7 @@
 {
   "name": "regattalistner",
-  "version": "1.4.0",
-  "description": "Command line weather tool",
+  "version": "1.4.1",
+  "description": "Regatta on Raspberry Pi",
   "main": "./build/main.js",
   "scripts": {
     "build": "rimraf ./build && tsc",
