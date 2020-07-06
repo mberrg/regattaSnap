@@ -30,7 +30,6 @@ const DEVICE_ADDRESS = 0x20; // 7 bit address (will be left shifted to add the r
 // Don't change the values, there's no need for that.
 const DEVICE_REG_MODE1 = 0x06;
 
-//Device registry data
 
 class CountDownStore {
   private socket?: WebSocket;
