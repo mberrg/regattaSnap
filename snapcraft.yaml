@@ -6,11 +6,14 @@ description: |
     $ regattalistner
 
 confinement: devmode
-base: core20
-
+base: core18
+architectures:
+  - build-on: amd64
+    run-on: [armhf]
 parts:
   regatta:
     plugin: nodejs
+    node-engine: 12.18.2
     source: .
 
 apps:
