@@ -6,13 +6,13 @@ description: |
     $ regattalistner
 
 confinement: devmode
-base: core18
+base: core20
 
 parts:
-  wethr:
+  regatta:
     plugin: nodejs
     source: .
 
 apps:
-  wethr:
+  regatta:
     command: regattalistner
